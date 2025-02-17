@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID CENCEC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>COVID CENCEC</h1>
+    <form id="calculator">
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" step="0.01" required><br>
+        <!-- Add input fields for other variables here -->
+		<label for="comorbilidades">Comorbilidades:</label>
+		<input type="number" id="comorbilidades" name="comorbilidades" step="0.01" required><br>		
+		<label for="IRP_sintomas">IRP_sintomas:</label>
+		<input type="number" id="IRP_sintomas" name="IRP_sintomas" step="0.01" required><br>
+		<label for="fr">fr:</label>
+		<input type="number" id="fr" name="fr" step="0.01" required><br>
+		<label for="PAM">PAM:</label>
+		<input type="number" id="PAM" name="PAM" step="0.01" required><br>
+		<label for="inl">inl:</label>
+		<input type="number" id="inl" name="inl" step="0.01" required><br>
+		<label for="plaquetas">plaquetas:</label>
+		<input type="number" id="plaquetas" name="plaquetas" step="0.01" required><br>		
+        <button type="submit">Calculate</button>
+    </form>
+    <div id="result" class="hidden"></div>
+    <script src="app.js"></script>
+</body>
+</html>

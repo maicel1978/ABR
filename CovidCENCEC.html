@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID CENCEC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>COVID CENCEC</h1>
+    </header>
+    <main>
+        <form id="calculator">
+            <fieldset>
+                <legend>Datos del paciente</legend>
+                <label for="edad">Edad (años):</label>
+                <input type="number" id="edad" name="edad" min="0" max="130" step="0.01" required><br>
+                <label for="comorbilidades">Suma de comorbilidades (0-3):</label>
+                <input type="number" id="comorbilidades" name="comorbilidades" min="0" max="3"  step="0.01" required><br>		
+                <label for="IRP_sintomas">IRP sintomas (0-5):</label>
+                <input type="number" id="IRP_sintomas" name="IRP_sintomas" min="0" max="5" step="0.01" required><br>
+                <label for="fr">Frecuencia respiratoria (Resp x min):</label>
+                <input type="number" id="fr" name="fr" min="0" max="60" step="0.01" required><br>
+                <label for="PAM">Presión arterial media (PAM):</label>
+                <input type="number" id="PAM" name="PAM" min="0" max="230" step="0.01" required><br>
+                <label for="inl">Índice neutrófilo-linfocito (INL):</label>
+                <input type="number" id="inl" name="inl" min="0" max="10" step="0.01" required><br>
+                <label for="plaquetas">Plaquetas (x10^9/L):</label>
+                <input type="number" id="plaquetas" name="plaquetas" min="0" max="500" step="0.01" required><br>		
+            </fieldset>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="result" class="hidden"></div>
+        <p>Probabilidad:</p>
+        <div id="progress-bar-container" style="width: 100%; background-color: #f3f3f3;">
+            <div id="progress-bar" style="width: 0%; height: 24px; background-color: #4CAF50;"></div>
+        </div>
+        <p id="progress-bar-labels">
+            <span style="float: left;">0</span>
+            <span style="float: right;">100</span>
+        </p>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
